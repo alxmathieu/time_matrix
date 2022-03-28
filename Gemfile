@@ -35,6 +35,8 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+
 
 group :development, :test do
   gem 'pry-byebug'
