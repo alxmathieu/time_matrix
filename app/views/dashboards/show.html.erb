@@ -1,2 +1,6 @@
 <h1>You're logged in! Welcome to the User Dashboard!</h1>
+Name: <%= @user.full_name %>
+<br>
+Email: <%= @user.email %>
+<br>
 <%= link_to "Sign Out", destroy_user_session_path %>
