@@ -3,4 +3,8 @@ Name: <%= @user.full_name %>
 <br>
 Email: <%= @user.email %>
 <br>
+Access_Token: <%= @user.access_token  %>
+<br>
+Refresh token: <%= @user.refresh_token  %>
+
 <%= link_to "Sign Out", destroy_user_session_path %>
