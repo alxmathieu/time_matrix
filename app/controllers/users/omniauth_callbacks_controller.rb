@@ -1,6 +1,11 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
     user = User.from_google(**from_google_params)
+    user.full_name = from_google_params[:full_name]
+    user.avatar_url = from_google_params[:avatar_url]
+    user.access_token = from_google_params[:access_token]
+    user.refresh_token = from_google_params[:refresh_token]
+    user.save!
     if user.present?
       sign_out_all_scopes
       flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
