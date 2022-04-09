@@ -6,5 +6,8 @@ Email: <%= @user.email %>
 Access_Token: <%= @user.access_token  %>
 <br>
 Refresh token: <%= @user.refresh_token  %>
-
+<br>
+<%#= link_to "Calendar show", calendar_path(@calendar) %>
+<br>
 <%= link_to "Sign Out", destroy_user_session_path %>
+
